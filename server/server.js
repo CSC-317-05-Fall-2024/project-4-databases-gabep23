@@ -2,7 +2,6 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { getRestaurants, getRestaurant, createRestaurant, deleteRestaurant, getReviewsForRestaurant } from './data/restaurants.js';
-// import apiRouter from './routes/api.js';
 
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
@@ -12,8 +11,6 @@ app.set('view engine', 'ejs');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-// app.use('/api', apiRouter);
 
 // static files 
 app.use(express.static(path.join(__dirname, 'public')));
