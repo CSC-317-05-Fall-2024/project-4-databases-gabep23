@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New York Restaurants</title>
+    <script defer src="/scripts/header.js"></script>
+    <script defer src="/scripts/restaurantCards.js"></script> 
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/attractions">Attractions</a></li>
+              <li><a href="/restaurants">Restaurants</a></li>
+             <li><a href="/newRestaurants">Add New Restaurant</a></li>
+            </ul>
+        </nav>
+    </header>          
+
+    <!-- Restaurants Section -->
+    <section class="restaurants-grid">
+        <% restaurants.forEach((restaurant) => { %>
+            <div class="restaurant" id="restaurant-<%= restaurant.id %>">
+                <a href="/restaurants/<%= restaurant.id %>">
+                    <img src="<%= restaurant.photo || 'https://picsum.photos/300/200' %>" alt="<%= restaurant.name %>">
+                    <h2><%= restaurant.name %></h2>
+                </a>
+                <p><%= restaurant.address %></p>
+                <p><%= restaurant.phone %></p>
+                <button class="delete-btn" data-id="<%= restaurant.id %>">X</button>
+            </div>
+        <% }) %>
+    </section>
+    
+
+    <footer></footer>
+
+    <script defer src="/scripts/header.js"></script>
+    <script src="/scripts/restaurantCards.js"></script>
+
+</body>
+</html>

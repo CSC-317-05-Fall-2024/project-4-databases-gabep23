@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Restaurant Form</title>
+    <script defer src="/scripts/header.js"></script>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+          <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/attractions">Attractions</a></li>
+          <li><a href="/restaurants">Restaurants</a></li>
+          <li><a href="/newRestaurants">Add New Restaurant</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="new-restaurant-form">
+        <h1>Add a New Restaurant</h1>
+
+        <form class="new-restaurant-form" action="/newRestaurants" method="POST">
+
+          <div>
+            <label for="name">Restaurant Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div>
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+          </div>
+
+          <div>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+          </div>
+
+          <div>
+            <label for="photo">Photo URL (optional):</label>
+            <input type="text" id="photo" name="photo">
+          </div>
+
+          <button type="submit">Submit</button>
+
+        </form>
+
+      </section>
+      
+      <footer></footer>
+
+    </body>
+    </html>
